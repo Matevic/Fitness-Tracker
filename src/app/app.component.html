@@ -1,0 +1,41 @@
+<nz-layout class="layout">
+  <nz-sider>
+    <div class="logo">
+      <img src="images/icon.jpg" alt="Avatar" class="avatar"/>
+      <div class="user-info">
+        <strong>John</strong>
+      </div>
+    </div>
+
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item nzMatchRouter>
+        <span nz-icon nzType="dashboard"></span>
+        <a [routerLink]="['/','dashboard']"> Dashboard</a>
+      </li>
+
+      <li nz-menu-item nzMatchRouter>
+        <span nz-icon nzType="split-cells"></span>
+        <a [routerLink]="['/','workout']"> Workout</a>
+      </li>
+
+      <li nz-menu-item nzMatchRouter>
+        <span nz-icon nzType="control"></span>
+        <a [routerLink]="['/','activity']"> Activity</a>
+      </li>
+
+      <li nz-menu-item nzMatchRouter>
+        <span nz-icon nzType="fund"></span>
+        <a [routerLink]="['/','goal']"> Goal</a>
+      </li>
+    </ul>
+  </nz-sider>
+
+  <nz-layout class="right-layout">
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+
+</nz-layout>
